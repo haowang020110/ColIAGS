@@ -1,10 +1,10 @@
 <div align="center">
-<h1>Moving Light Adaptive Colonoscopy Reconstruction via Improved Structure-compliant 3D Gaussian </h1>
+<h1>Moving Light Adaptive Colonoscopy Reconstruction via Illumination-Attenuation-Aware 3D Gaussian Splatting </h1>
 </div>
 
 ## Overview
 
-To address the challenge of dynamic illumination in 3D Gaussian Splatting (3DGS) for colonoscopy, where moving light sources degrade reconstruction quality, this work implements ***an improved structure-compliant 3DGS method (ColStrGS)***. We propose tethering Gaussians around colon surfaces via voxelized anchors and enforcing gravity constraints to stabilize their positions, eliminating structure-violating artifacts. Furthermore, ColStrGS adapts Gaussian appearances dynamically based on camera distance to mimic photometric variations. Experiments demonstrate the superiority of ColStrGS over other state-of-the-arts, particularly in reducing depth errors while maintaining high rendering quality.
+To address the challenge of dynamic illumination in 3D Gaussian Splatting (3DGS) for colonoscopy, where moving light sources degrade reconstruction quality, this work implements ***an Illumination-Attenuation-Aware 3D Gaussian Splatting method (ColIAGS)***. We propose tethering Gaussians around colon surfaces via voxelized anchors and enforcing gravity constraints to stabilize their positions, eliminating structure-violating artifacts. Furthermore, ColStrGS adapts Gaussian appearances dynamically based on camera distance to mimic photometric variations. Experiments demonstrate the superiority of ColStrGS over other state-of-the-arts, particularly in reducing depth errors while maintaining high rendering quality.
 
 <p align="center">
     <img src="assets/method.png"/ width=800> <br />
@@ -12,9 +12,14 @@ To address the challenge of dynamic illumination in 3D Gaussian Splatting (3DGS)
 
 ## Experimental Results
 
-### 📊 Evaluation on C3VD
+### 📊 Evaluation on C3VD and RotateColon
 <p align="center">
-    <img src="assets/experiment.png"/ width=800> <br />
+    <img src="assets/exp1.png"/ width=800> <br />
+</p>
+
+### 📊 Evaluation on C3VD without ground truth initialization
+<p align="center">
+    <img src="assets/exp2.png"/ width=800> <br />
 </p>
 
 ### 📷 Visualization Comparisons
