@@ -4,7 +4,12 @@
 
 ## Overview
 
-To address the challenge of dynamic illumination in 3D Gaussian Splatting (3DGS) for colonoscopy, where moving light sources degrade reconstruction quality, this work implements ***an Illumination-Attenuation-Aware 3D Gaussian Splatting method (ColIAGS)***. We propose tethering Gaussians around colon surfaces via voxelized anchors and enforcing gravity constraints to stabilize their positions, eliminating structure-violating artifacts. Furthermore, ColStrGS adapts Gaussian appearances dynamically based on camera distance to mimic photometric variations. Experiments demonstrate the superiority of ColStrGS over other state-of-the-arts, particularly in reducing depth errors while maintaining high rendering quality.
+To address the challenge of dynamic illumination in 3D Gaussian Splatting (3DGS) for colonoscopy, where moving light sources degrade reconstruction quality, this work implements ***an Illumination-Attenuation-Aware 3D Gaussian Splatting method (ColIAGS)***. 
+
+Specifically, ColIAGS consists of two key modules, i.e., Improved Geometry Modeling with View Embedding (IMVE) and Improved Appearance Modeling with Illumination Attenuation (IMIA).
+IMVE enhances geometric representation by introducing high-frequency details, thereby improving the accuracy of appearance modeling.
+IMIA incorporates both the camera (or light source) distance and orientation to accurately model the two types of illumination attenuation observed in colonoscopy while implicitly optimizing the illumination attenuation solutions through an MLP.
+
 
 <p align="center">
     <img src="assets/method.png"/ width=800> <br />
@@ -14,12 +19,12 @@ To address the challenge of dynamic illumination in 3D Gaussian Splatting (3DGS)
 
 ### 📊 Evaluation on C3VD and RotateColon
 <p align="center">
-    <img src="assets/exp1.png"/ width=800> <br />
+    <img src="assets/exp1.jpg"/ width=800> <br />
 </p>
 
 ### 📊 Evaluation on C3VD without ground truth initialization
 <p align="center">
-    <img src="assets/exp2.png"/ width=800> <br />
+    <img src="assets/exp2.jpg"/ width=800> <br />
 </p>
 
 ### 📷 Visualization Comparisons
