@@ -58,7 +58,7 @@ Qualitative comparisons show that the novel views rendered by Gaussian Pancakes 
 
 ## Implementations
 
-Currently, we have released the core code, and the full version will be made available after the paper is accepted.
+Code will be made available after the paper is accepted.
 
 ## Acknowledgement
 Thanks the authors for their works:
