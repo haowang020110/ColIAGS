@@ -107,6 +107,7 @@ Key files:
 - Image/depth naming: the current loader expects filenames in the form `"{idx}_*.png"`, for example `0_color.png` and `0_depth.png`, and checks index consistency.
 
 ### 2.2 C3VD (pr-endo) with EndoGSLAM initialization
+**NOTE: We use the data released by [PR-Endo](https://github.com/SanoScience/PR-ENDO).**
 
 This loader is triggered when the `source_path` contains both `C3VD` and `pr-endo`.
 
@@ -120,18 +121,9 @@ data/C3VD/pr-endo/C3VD/<scene_name>/
     *.tiff
 ```
 
-It also expects an optimized pose and point cloud folder at:
-
-```text
-data/C3VD/pr-endo/C3VD_endogslam_optimized/<scene_name>/
-  params.npz
-  point_cloud/
-    iteration_*/
-      point_cloud.ply
-```
 
 ### 2.3 ColonRotate (synthetic rotating sequence)
-
+**NOTE: We use the data released by [PR-Endo](https://github.com/SanoScience/PR-ENDO).**
 Expected structure:
 
 ```text
@@ -175,76 +167,23 @@ Arguments:
 - `--port`: viewer port
 - `--disable_viewer`: disable the viewer socket during training
 
-### 3.2 Batch training with provided scripts
-
-Example scripts are available in `script/train_again.sh` and `script/train_new.sh`.
-
-```bash
-bash script/train_again.sh
-# or
-bash script/train_new.sh
-```
-
-You may need to adjust:
-- `CUDA_VISIBLE_DEVICES`
-- dataset root paths
-- output paths
-- port numbers
-
 ---
 
-## 4. Outputs and Evaluation
 
-Training automatically performs the following steps:
-1. saves Gaussian checkpoints
-2. renders train/test views
-3. computes quantitative metrics
 
-A typical output structure under `-m <model_path>` is:
-
-```text
-<model_path>/
-  point_cloud/
-    iteration_30000/
-      point_cloud.ply
-  train/ours_30000/
-    renders/
-    gt/
-    depth/
-    gt_depth/
-    errors/
-  test/ours_30000/
-    renders/
-    gt/
-    depth/
-    gt_depth/
-    errors/
-  results.json
-  per_view.json
-```
-
-Metrics:
-- RGB: `PSNR`, `SSIM`, `LPIPS`
-- Depth: `Depth MSE`
-
----
-
-## 5. Acknowledgements
+## 4. Acknowledgements
 
 This codebase is built upon or inspired by the following excellent open-source projects:
 
-- **3D Gaussian Splatting** from Graphdeco-Inria
-- [Scaffold-GS]:https://github.com/city-super/Scaffold-GS
-- **PR-Endo**
-- **GaussianShader**
-- **LPIPS**
-- **FLIP** from NVIDIA
+- [3D-GS](https://github.com/graphdeco-inria/gaussian-splatting)
+- [Scaffold-GS](https://github.com/city-super/Scaffold-GS)
+- [PR-Endo](https://github.com/SanoScience/PR-ENDO)
 
 We sincerely thank the authors of these projects for making their code publicly available.
 
 ---
 
-## 6. Citation
+## 5. Citation
 
 If you find this repository useful, please cite our ICME 2026 paper.
 
