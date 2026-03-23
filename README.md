@@ -2,10 +2,9 @@
 
 Official implementation of our **ICME 2026** paper (camera-ready information will be updated).
 
-This repository provides a **depth-supervised**, **scaffold/anchor-based 3D Gaussian Splatting** pipeline for endoscopic and colonoscopy scenes, including dataset loading, training, rendering, and evaluation with **PSNR / SSIM / LPIPS / Depth MSE**.
 
 <p align="center">
-  <img src="assets/methodv3.png" width="900" />
+  <img src="assets/methodv3.png" />
 </p>
 
 ---
@@ -106,7 +105,7 @@ Key files:
 - `camera.json`: camera intrinsics and image size. It should include `fx`, `fy`, `cx`, `cy`, `h`, and `w`.
 - Image/depth naming: the current loader expects filenames in the form `"{idx}_*.png"`, for example `0_color.png` and `0_depth.png`, and checks index consistency.
 
-### 2.2 C3VD (pr-endo) with EndoGSLAM initialization
+### 2.2 C3VD with EndoGSLAM initialization
 **NOTE: We use the data released by [PR-Endo](https://github.com/SanoScience/PR-ENDO).**
 
 This loader is triggered when the `source_path` contains both `C3VD` and `pr-endo`.
@@ -122,7 +121,7 @@ data/C3VD/pr-endo/C3VD/<scene_name>/
 ```
 
 
-### 2.3 ColonRotate (synthetic rotating sequence)
+### 2.3 ColonRotate
 **NOTE: We use the data released by [PR-Endo](https://github.com/SanoScience/PR-ENDO).**
 Expected structure:
 
