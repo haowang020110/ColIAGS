@@ -234,8 +234,8 @@ Metrics:
 This codebase is built upon or inspired by the following excellent open-source projects:
 
 - **3D Gaussian Splatting** from Graphdeco-Inria
-- **diff-gaussian-rasterization**
-- **simple-knn**
+- [Scaffold-GS]:https://github.com/city-super/Scaffold-GS
+- **PR-Endo**
 - **GaussianShader**
 - **LPIPS**
 - **FLIP** from NVIDIA
