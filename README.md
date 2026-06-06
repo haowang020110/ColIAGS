@@ -1,8 +1,7 @@
 # ColIAGS
-
 Official implementation of our **ICME 2026** paper (camera-ready information will be updated).
 
-
+**Update:** ColIAGS is selected as oral presentation (<5%).
 <p align="center">
   <img src="assets/methodv3.png" />
 </p>
